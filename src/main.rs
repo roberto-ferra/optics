@@ -1,6 +1,6 @@
 use excited_state_probability::ExcitedStatePopulationProbabilityCalculator;
 
-use crate::excited_state_probability::{AtomParameters, LaserParameters};
+use crate::excited_state_probability::{AtomParameters, LaserParameters, WavelengthToFrequencyConverter};
 
 mod excited_state_probability;
 
@@ -18,6 +18,7 @@ fn main() {
         }
     }
 
+    assert_eq!(555171218518518.5, WavelengthToFrequencyConverter::convert_wavelength_to_frequency(540.0));
     assert_ne!(0.0, max_probability);
     assert!(max_probability <= 1.0);
 }

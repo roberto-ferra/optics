@@ -68,7 +68,7 @@ pub struct WavelengthToFrequencyConverter;
 
 impl WavelengthToFrequencyConverter {
     pub fn convert_wavelength_to_frequency(wavelength_in_nanometers: f64) -> f64 {
-        PhysicalConstants::SPEED_OF_LIGHT / (wavelength_in_nanometers * 10e-9)
+        PhysicalConstants::SPEED_OF_LIGHT / (wavelength_in_nanometers * 1e-9)
     }
 }
 
